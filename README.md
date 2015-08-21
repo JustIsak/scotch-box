@@ -125,7 +125,7 @@ vagrant ssh
 
 ## Database Access
 
-### MySQL 
+### MySQL
 
 - Hostname: localhost or 127.0.0.1
 - Username: root
@@ -167,7 +167,7 @@ vagrant box update
 
 ## Setting a Hostname
 
-If you're like me, you prefer to develop at a domain name versus an IP address. If you want to get rid of the some-what ugly IP address, just add a record like the following example to your computer's host file.
+If you're like me, you prefer to develop at a domain name versus an IP address. If you want to get rid of the some-what ugly IP address, just add a record like the following example to your computer's host file (C:\Windows\System32\drivers\etc\host).
 
 ```bash
 192.168.33.10 whatever-i-want.local
@@ -181,6 +181,19 @@ Or if you want "www" to work as well, do:
 
 Technically you could also use a Vagrant Plugin like [Vagrant Hostmanager][15] to automatically update your host file when you run Vagrant Up. However, the purpose of Scotch Box is to have as little dependencies as possible so that it's always working when you run "vagrant up".
 
+
+## Jekyll
+
+* Install Jekyll, bundler & other components
+```bash
+gem install jekyll
+gem install bundler
+bundle install
+```
+* start server :
+```bash
+jekyll serve -H 0.0.0.0 --drafts --force_polling
+```
 
 
 ## The MIT License (MIT)
