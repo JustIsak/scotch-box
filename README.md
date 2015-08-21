@@ -186,8 +186,8 @@ Technically you could also use a Vagrant Plugin like [Vagrant Hostmanager][15] t
 
 * Install Jekyll, bundler & other components
 ```bash
-gem install jekyll
 gem install bundler
+gem install jekyll
 bundle install
 ```
 * start server :
