@@ -11,4 +11,8 @@ Vagrant.configure("2") do |config|
     config.vm.network "forwarded_port", guest: 1080, host: 1080
     # Jekyll
     config.vm.network "forwarded_port", guest: 4000, host: 4000
+
+    #http://docs.vagrantup.com/v2/provisioning/shell.html
+    #config.vm.provision "shell", path: "provision/pimpMyBox.sh"
+
 end
