@@ -39,6 +39,7 @@ mailcatcher --http-ip=0.0.0.0 -f
 ##################
 # Add Composer to PATH.
 export PATH="~/.composer/vendor/bin:$PATH"
+sudo composer self-update
 
 # PHP copy/past detector + dead code detector
 composer global require "sebastian/phpcpd=*"
@@ -56,9 +57,10 @@ sudo composer global require "phpmd/phpmd"
 composer global require "squizlabs/php_codesniffer=*"
 
 # phpmetrics
-phpmetrics --report-html=myreport.html cvq/evo2015/application/
+composer global require "halleck45/phpmetrics"
+# phpmetrics --report-html=myreport.html cvq/evo2015/application/
 
 # phploc
-composer global require 'phploc/phploc=*'
+composer global require "phploc/phploc=*"
 
 echo "Installation completed !"
