@@ -17,7 +17,7 @@ sudo service apache2 restart
 ##########
 gem install bundler
 gem install jekyll
-sudo bundle install
+bundle install
 
 alias cls="clear"
 alias cdp="cd /var/www/public"
