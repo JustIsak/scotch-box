@@ -15,8 +15,8 @@ sudo service apache2 restart
 ##########
 # Jekyll #
 ##########
-sudo gem install bundler
-sudo gem install jekyll
+gem install bundler
+gem install jekyll
 sudo bundle install
 
 alias cls="clear"
