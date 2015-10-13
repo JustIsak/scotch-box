@@ -33,6 +33,10 @@ mailcatcher --http-ip=0.0.0.0 -f
 # If don't work, install Mailcatcher Dependencies (sqlite, ruby)
 # sudo apt-get install -y libsqlite3-dev ruby1.9.1-dev
 
+#############
+# ROBOMONGO #
+#############
+# in /etc/mongod.conf, comment line : bind_ip = 127.0.0.1
 
 ##################
 # COMPOSER TOOLS #
