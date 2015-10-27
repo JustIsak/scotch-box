@@ -62,7 +62,7 @@ composer global require "squizlabs/php_codesniffer=*"
 
 # phpmetrics
 composer global require "halleck45/phpmetrics"
-# phpmetrics --report-html=myreport.html cvq/evo2015/application/
+# example : phpmetrics --report-html=myreport.html cvq/evo2015/application/
 
 # phploc
 composer global require "phploc/phploc=*"
