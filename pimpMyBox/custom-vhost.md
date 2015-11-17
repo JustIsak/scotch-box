@@ -8,7 +8,9 @@ $ mkdir -p /var/www/$NEWDOM/public
 ```
 
 2. Update your vagrant file.
+```
 config.vm.synced_folder "../../sites/$NEWDOM/", "/var/www/$NEWDOM/public/", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
+```
 
 FYI, my file architecture:
 ```

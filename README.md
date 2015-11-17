@@ -1,4 +1,4 @@
-# Scotchbox
+# Scotchbox by scotch.io :heart:
 
 ## Must read
 
@@ -16,7 +16,7 @@
 
 MongoDB access with Robomongo (in /etc/mongod.conf, comment line : bind_ip = 127.0.0.1)
 
-### Update box
+### Updating box
 
 ```
 sudo apt-get update
