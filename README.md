@@ -9,7 +9,7 @@
 
 * [Alias](pimpMyBox/alias.md)
 * [Custom vhost](pimpMyBox/custom-vhost.md)
-* [Jekyl](pimpMyBox/custom-vhost.md)
+* [Jekyl](pimpMyBox/jekyll.md)
 * [PHP Tools](pimpMyBox/phpTools.md)
 
 ### Robomongo
