@@ -31,8 +31,8 @@ If you want to create a subdomain like http://$NEWDOM.local
     ```xml
     <VirtualHost *:80>
         ServerAdmin webmaster@localhost
-        ServerName stia
-        ServerAlias stia.local
+        ServerName $NEWDOM
+        ServerAlias $NEWDOM.local
         DocumentRoot /var/www/$NEWDOM/public/web
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
