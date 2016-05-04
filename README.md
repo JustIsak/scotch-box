@@ -12,6 +12,7 @@
 * [Jekyl](pimpMyBox/jekyll.md)
 * [PHP Tools](pimpMyBox/phpTools.md)
 * [PHP7](pimpMyBox/php7.md)
+* [Windows latency?](pimpMyBox/speedup.md)
 
 ### Robomongo
 

@@ -41,10 +41,10 @@ composer global require "squizlabs/php_codesniffer=*"
 ## phpmetrics
 
 ```
-composer global require "halleck45/phpmetrics"
+composer global require "phpmetrics/phpmetrics"
 ```
 
-Using: ```phpmetrics --report-html=myreport.html cvq/evo2015/application/```
+Using: ```phpmetrics --report-html=myreport.html path/to/src/```
 
 ## phploc (Line of code)
 
