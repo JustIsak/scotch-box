@@ -25,8 +25,8 @@
 3. Set timezone (i.e. date.timezone = Europe/Paris)
 
     ```sh
-    sudo vi /etc/php/7.0/cli/php.ini
-    sudo vi /etc/php/7.0/apache2/php.ini
+    sudo sed -i 's/^;\(date\.timezone\) =\s*$/\1 = "Europe\/Paris"/g' /etc/php/7.0/cli/php.ini
+    sudo sed -i 's/^;\(date\.timezone\) =\s*$/\1 = "Europe\/Paris"/g' /etc/php/7.0/apache2/php.ini
     ```
 
 4. Restart apache service
