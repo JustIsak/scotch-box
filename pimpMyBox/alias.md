@@ -20,3 +20,5 @@ echo "alias jek='jekyll serve -H 0.0.0.0 --drafts --force_polling'" >> /home/vag
 echo "alias cdp='cd /var/www/public'" >> /home/vagrant/.bashrc
 echo "alias sf='php app/console'" >> /home/vagrant/.bashrc
 ```
+
+Then: `source ~/.bashrc`
