@@ -10,7 +10,17 @@ Given, your host is **scotch.local**.
     $ openssl req -new -x509 -nodes -sha1 -days 3650 -key scotch.local.key -out scotch.local.crt -config /etc/ssl/openssl.cnf
     ```
 
-2. Then edit your file configuration: (e.g. `$ sudo vi /etc/apache2/sites-available/scotch.local.conf`)
+    **Important!** Common Name **must** be the name of the web server.
+    > Common Name (eg, YOUR name) []: **scotch.local**
+
+
+2. Activate SSL mode
+
+    ```
+    sudo a2enmod ssl
+    ```
+
+3. Then edit your file configuration: (e.g. `$ sudo vi /etc/apache2/sites-available/scotch.conf`)
 
     ```
     <VirtualHost *:80>
@@ -35,7 +45,13 @@ Given, your host is **scotch.local**.
     </VirtualHost>
     ```
 
-3. Restart apache
+4. *(optional)* Ensure that your configuration file is ok
+
+    ```
+    sudo apache2 -t
+    ```
+
+5. Restart apache service
 
     ```
     $ sudo service apache2 restart
