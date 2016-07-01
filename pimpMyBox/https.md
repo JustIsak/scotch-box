@@ -4,10 +4,10 @@ Given, your host is **scotch.local**.
 
 1. First, you need to generate private/public keys
 
-    ```
-    $ cd /etc/apache2/
-    $ openssl genrsa 1024 > scotch.local.key
-    $ openssl req -new -x509 -nodes -sha1 -days 3650 -key scotch.local.key -out scotch.local.crt -config /etc/ssl/openssl.cnf
+    ```sh
+    cd /etc/apache2/
+    openssl genrsa 1024 > scotch.local.key
+    openssl req -new -x509 -nodes -sha1 -days 3650 -key scotch.local.key -out scotch.local.crt -config /etc/ssl/openssl.cnf
     ```
 
     **Important!** Common Name **must** be the name of the web server.
@@ -16,7 +16,7 @@ Given, your host is **scotch.local**.
 
 2. Activate SSL mode
 
-    ```
+    ```sh
     sudo a2enmod ssl
     ```
 
@@ -47,12 +47,12 @@ Given, your host is **scotch.local**.
 
 4. *(optional)* Ensure that your configuration file is ok
 
-    ```
+    ```sh
     sudo apache2 -t
     ```
 
 5. Restart apache service
 
-    ```
-    $ sudo service apache2 restart
+    ```sh
+    sudo service apache2 restart
     ```

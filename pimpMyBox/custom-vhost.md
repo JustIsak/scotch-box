@@ -1,11 +1,11 @@
-# Creatint a custom domain (elsewhere scotchbox directory)
+# Creating a custom domain (elsewhere scotchbox directory)
 
-If you want to create a subdomain like http://$NEWDOM.local
+Given, $NEWDOM is the subdomain you want to create (http://$NEWDOM.local).
 
 1. Create directory
 
     ```sh
-    $ mkdir -p /var/www/$NEWDOM/public
+    mkdir -p /var/www/$NEWDOM/public
     ```
 2. Update your vagrant file.
 
@@ -17,7 +17,7 @@ If you want to create a subdomain like http://$NEWDOM.local
     ```
     /box/scotch-box
         /another-box
-    
+
     /sites/aWebsite
           /anotherWebsite
           /...
@@ -25,8 +25,8 @@ If you want to create a subdomain like http://$NEWDOM.local
 3. Creating new vhost
 
     ```sh
-    $ sudo cp /etc/apache2/sites-available/scotchbox.local.conf /etc/apache2/sites-available/$NEWDOM.conf
-    $ sudo nano /etc/apache2/sites-available/$NEWDOM.conf
+    sudo cp /etc/apache2/sites-available/scotchbox.local.conf /etc/apache2/sites-available/$NEWDOM.conf
+    sudo nano /etc/apache2/sites-available/$NEWDOM.conf
     ```
     ```xml
     <VirtualHost *:80>
@@ -41,19 +41,25 @@ If you want to create a subdomain like http://$NEWDOM.local
 
 4. Enable new domain
 
-    ```
-    $ sudo a2ensite $NEWDOM.conf
+    ```sh
+    sudo a2ensite $NEWDOM.conf
     ```
 
 5. Restart apache
 
-    ```
-    $ sudo service apache2 restart
+    ```sh
+    sudo service apache2 restart
     ```
 
-6. Update host file
+6. Update host file on host OS
 
     ```
-    #  C:\Windows\System32\drivers\etc\host
+    # C:\Windows\System32\drivers\etc\host or /etc/hosts
     192.168.33.10 $NEWDOM.local
+    ```
+
+7. (optional) update host inside box
+
+    ```
+    127.0.0.1 $NEWDOM.local
     ```
