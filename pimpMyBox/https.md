@@ -6,6 +6,7 @@ Given, your host is **scotch.local**.
 
     ```sh
     cd /etc/apache2/
+    sudo su
     openssl genrsa 1024 > scotch.local.key
     openssl req -new -x509 -nodes -sha1 -days 3650 -key scotch.local.key -out scotch.local.crt -config /etc/ssl/openssl.cnf
     ```
