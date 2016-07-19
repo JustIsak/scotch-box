@@ -9,7 +9,7 @@
 
 * [Alias](pimpMyBox/alias.md)
 * [Custom vhost](pimpMyBox/custom-vhost.md)
-* [Jekyl](pimpMyBox/jekyll.md)
+* [Jekyll](pimpMyBox/jekyll.md)
 * [Enable HTTPS](pimpMyBox/https.md)
 * [PHP Tools](pimpMyBox/phpTools.md)
 * [PHP7](pimpMyBox/php7.md)
