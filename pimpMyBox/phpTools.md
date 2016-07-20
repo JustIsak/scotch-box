@@ -7,8 +7,14 @@ sudo composer self-update
 ## Xdebug
 
 ```
+# Old way
 sudo apt-get install php5-xdebug -y
 sudo service apache2 restart
+# PHP7 compliant
+sudo pecl install xdebug
+sudo vi /etc/php/7.0/cli/php.ini
+# then write this line (end of file)
+zend_extension=/usr/lib/php/20151012/xdebug.so
 ```
 
 ## PHP copy/past detector + dead code detector
