@@ -4,19 +4,24 @@ PHP application may be slow with Vagrant & Windows.
 
 ## Fix guide
 
-1. Install [VirtualBox Guest plugin](https://github.com/dotless-de/vagrant-vbguest)
+1. Make sure that you use **nfs** in Vagrant file
+     ```
+     config.vm.synced_folder "../what/ever/path", "/var/www", :nfs => { :mount_options => ["dmode=777","fmode=666"] }
+     ```
+
+2. Install [VirtualBox Guest plugin](https://github.com/dotless-de/vagrant-vbguest)
 
      ```
      vagrant plugin install vagrant-vbguest
      ```
 
-2. Install [Vagrant WinNFSd plugin](https://github.com/winnfsd/vagrant-winnfsd)
+3. Install [Vagrant WinNFSd plugin](https://github.com/winnfsd/vagrant-winnfsd)
 
     ```
     vagrant plugin install vagrant-winnfsd
     ```
 
-3. [Install PHP7](php7.md)
+4. [Install PHP7](php7.md)
 
 
 ## Using Symfony ?
