@@ -6,7 +6,7 @@ sudo composer self-update
 
 ## Xdebug
 
-```
+```bash
 # Old way
 sudo apt-get install php5-xdebug -y
 sudo service apache2 restart
