@@ -16,6 +16,8 @@
         && php7.0 \
         && php7.0-fpm \
         && php7.0-mysql \
+        && php7.0-pgsql \
+        && php-redis \
         && php-curl \
         && libapache2-mod-php7.0 \
         && php7.0-mbstring
